@@ -1,6 +1,5 @@
 # UserSearchGitHub
 
-# Problem statement
 Develop a pseudo iOS application which would let users help search and analyse Github users conveniently.
 
 # Development Environment
@@ -9,6 +8,7 @@ Develop a pseudo iOS application which would let users help search and analyse G
 <li> Swift 4 </li>
 <li> iOS 8 & above </li>
 <li> Portrait and Landscape mode </li>
+<li>Offline support available for cached data </li>
 </ul>
 
 # Screenshots
