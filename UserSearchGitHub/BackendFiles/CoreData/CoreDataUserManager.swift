@@ -23,7 +23,9 @@ class CoreDataUserManager {
             do {
                 user.fillObject(userDict: userDict)
                 user.isFollower = isFollower
-                try context.save()
+                if isFollower == false {
+                    try context.save()
+                }
                 completion(user)
             }
             catch {

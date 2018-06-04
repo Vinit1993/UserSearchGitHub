@@ -36,15 +36,15 @@ class UserFollowersViewController: UIViewController {
                 guard let strongSelf = self else {
                     return
                 }
-                if error == nil {
-                    strongSelf.usersArray = users
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    if error == nil {
+                        strongSelf.usersArray = users
                         strongSelf.view.isUserInteractionEnabled = true
                         SVProgressHUD.dismiss()
                         strongSelf.followersTableView.reloadData()
+                    } else {
+                        strongSelf.showAlert(message: error.debugDescription)
                     }
-                } else {
-                    strongSelf.showAlert(message: error.debugDescription)
                 }
             })
         } else {

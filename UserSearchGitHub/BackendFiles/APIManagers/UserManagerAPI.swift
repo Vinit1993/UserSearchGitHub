@@ -46,7 +46,7 @@ class UserManagerAPI {
                     var usersArray: [User] = []
                     for userDict in usersDict {
                         CoreDataUserManager.shared.saveUserToLocalDB(userDict: userDict, isFollower: true, completion: { (user) in
-                            usersArray.append(user!)
+                            if let u = user { usersArray.append(u)}
                         })
                     }
                     completion(nil, usersArray)
